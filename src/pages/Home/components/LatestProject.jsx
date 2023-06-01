@@ -18,7 +18,7 @@ function LatestProject() {
                         <Image
                             border={"1px"}
                             borderColor={"gray.100"}
-                            src="/project-hijab.png"
+                            src="project-hijab.png"
                             w={"full"}
                             h={"full"}
                             objectFit={"cover"}
@@ -59,7 +59,7 @@ function LatestProject() {
                         <Image
                             border={"1px"}
                             borderColor={"gray.100"}
-                            src="/project-hijab.png"
+                            src="project-hijab.png"
                             w={"full"}
                             h={"full"}
                             objectFit={"cover"}
