@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { ROUTE_PATH } from "./path";
-import Home from "../pages/Home";
+import Home from "../pages/Home/Home";
 import ErrorPage from "../pages/ErrorPage";
 
 function Router() {

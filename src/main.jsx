@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "./theme";
+import "./scroll.css";
 
 console.log(theme);
 

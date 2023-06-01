@@ -1,0 +1,19 @@
+*::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5em;
+}
+
+* {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.2);
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background: rgba(0,0,0,0.2);
+}
