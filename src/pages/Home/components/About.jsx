@@ -46,7 +46,7 @@ function About() {
                             rounded={"3rem"}
                             w={"full"}
                             h={"full"}
-                            src={"/public/profile.png"}
+                            src={"/profile.png"}
                         />
                     </AspectRatio>
                 </Box>
