@@ -36,8 +36,8 @@ function About() {
                         top={0}
                         left={0}
                         w={"200%"}
-                        transform={"translate(-50%, 0)"}
                         zIndex={-1}
+                        transform={"translate(-50%, 0)"}
                     >
                         <Blob />
                     </Box>

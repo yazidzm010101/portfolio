@@ -9,10 +9,11 @@ import Blob from "../../assets/Blob";
 import Greeting from "./components/Greeting";
 import LatestProject from "./components/LatestProject";
 import About from "./components/About";
+import Experience from "./components/Experience";
 
 function Home() {
     return (
-        <Box w={"full"} overflowY={"hidden"}>
+        <Box w={"full"} minH="100vh" overflowY={"hidden"}>
             <Box w={"full"}>
                 <HStack
                     w={"full"}
@@ -41,6 +42,7 @@ function Home() {
                 <Greeting/>
                 <LatestProject/>
                 <About/>
+                <Experience/>
             </VStack>
         </Box>
     );
