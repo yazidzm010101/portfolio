@@ -14,6 +14,7 @@ import { RiMenu4Fill } from "react-icons/ri";
 import LatestProject from "./components/LatestProject";
 import About from "./components/About";
 import Experience from "./components/Experience";
+import Footer from "./components/Footer";
 
 function Home() {
     return (
@@ -32,7 +33,7 @@ function Home() {
                 top={0}
                 left={"50%"}
                 transform={"translateX(-50%)"}
-                color={"gray.100"}
+                color={"blue.50"}
                 h={"600px"}
             />
             <Box w={"full"} pos={"relative"}>
@@ -82,12 +83,13 @@ function Home() {
                     </HStack>
                 </HStack>
             </Box>
-            <VStack spacing={36} w={"full"} py={24} pos={"relative"}>
+            <VStack spacing={'12rem'} w={"full"} py={48} pos={"relative"}>
                 <Greeting />
                 <LatestProject />
                 <About />
                 <Experience />
             </VStack>
+            <Footer/>
         </Box>
     );
 }

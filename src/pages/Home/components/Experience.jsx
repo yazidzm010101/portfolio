@@ -162,7 +162,8 @@ const data = [
                 category: "PT. Indonesia Financial Group",
                 categoryColor: "red",
                 title: "Company KPI Ranking",
-                description: "Join development for IFG's child company ranking using officeless platform. Implement custom formulation and dynamic fields for KPI calculation. Help font-end team to consume statistical data by providing API",
+                description:
+                    "Join development for IFG's child company ranking using officeless platform. Implement custom formulation and dynamic fields for KPI calculation. Help font-end team to consume statistical data by providing API",
                 skills: [
                     {
                         name: "Officeless",
@@ -185,7 +186,8 @@ const data = [
                 category: "CIMB Niaga",
                 categoryColor: "red",
                 title: "SMART Expense",
-                description: "Join CIMB Niaga Smart Expense Management on Jojonomic Officeless Platform using Jojo Visual Programming.",
+                description:
+                    "Join CIMB Niaga Smart Expense Management on Jojonomic Officeless Platform using Jojo Visual Programming.",
                 skills: [
                     {
                         name: "Officeless",
@@ -217,7 +219,23 @@ function Experience() {
     const [active, setActive] = useState(0);
 
     return (
-        <VStack w={"full"} mx={"auto"}>
+        <VStack w={"full"} mx={"auto"} pos={"relative"}>
+            <Box w={"full"} maxW={"container.xl"} mx={"auto"}>
+                <Heading
+                    w={"full"}
+                    as="h2"
+                    mb={10}
+                    px={4}
+                    textAlign={{ base: "center" }}
+                    fontSize={"xl"}
+                    letterSpacing={3}
+                    fontWeight={"extrabold"}
+                    textTransform={"uppercase"}
+                    color={"teal.300"}
+                >
+                    Working Experience
+                </Heading>
+            </Box>
             <HStack px={6}>
                 {data.map((item, i) => (
                     <Image
@@ -239,20 +257,20 @@ function Experience() {
                     in={active == i}
                     as={Fade}
                     unmountOnExit
-                    spacing={6}
                     w={"100% !important"}
                     overflowX={"scroll"}
                     overflowY={"hidden"}
+                    px={{ base: 0, lg: "6rem" }}
+                    py={6}
                     alignItems={"stretch"}
                     _before={{ content: "''", margin: "auto" }}
                     _after={{ content: "''", margin: "auto" }}
                 >
                     {item.experiences.map((item, i) => (
-                        <Card
+                        <Box
                             as={motion.div}
                             initial="offscreen"
                             whileInView="onscreen"
-                            overflow={"hidden"}
                             key={i}
                             viewport={{ once: false, amount: 0.1 }}
                             variants={{
@@ -270,77 +288,81 @@ function Experience() {
                                     },
                                 },
                             }}
-                            bg={"white"}
-                            // border={"1px"}
-                            // borderColor={"gray.100"}
                             w={"full"}
                             maxW={"420px"}
                             flexShrink={0}
-                            rounded={"3xl"}
-                            shadow={"unset"}
+                            px={3}
                         >
-                            <CardHeader pb={1}>
-                                {item.category && (
-                                    <Tag
-                                        rounded={"xl"}
-                                        mb={2}
-                                        bg={item.categoryColor + ".500"}
-                                        color={"white"}
+                            <Card
+                                bg={"white"}
+                                w={"full"}
+                                h={"full"}
+                                rounded={"3xl"}
+                                shadow={"unset"}
+                            >
+                                <CardHeader pb={1}>
+                                    {item.category && (
+                                        <Tag
+                                            rounded={"xl"}
+                                            mb={2}
+                                            bg={item.categoryColor + ".500"}
+                                            color={"white"}
+                                        >
+                                            {item.category}
+                                        </Tag>
+                                    )}
+                                    <Heading
+                                        as={"h5"}
+                                        color={"gray.800"}
+                                        fontSize={"xl"}
+                                        fontWeight={"normal"}
+                                        letterSpacing={1}
                                     >
-                                        {item.category}
-                                    </Tag>
-                                )}
-                                <Heading
-                                    as={"h5"}
-                                    color={"gray.800"}
-                                    fontSize={"xl"}
-                                    fontWeight={"normal"}
-                                    letterSpacing={1}
-                                >
-                                    {item.title}
-                                </Heading>
-                            </CardHeader>
-                            <CardBody py={0}>
-                                <Text
-                                    lineHeight={2}
-                                    color={"gray.500"}
-                                    fontSize={"sm"}
-                                >
-                                    {item.description}
-                                </Text>
-                            </CardBody>
-                            <CardFooter>
-                                {item.skills && (
-                                    <HStack flexWrap={"wrap"} spacing={3}>
-                                        {item.skills.map((skill) => (
-                                            <Tag
-                                                color={
-                                                    skill.color &&
-                                                    skill.color + ".600"
-                                                }
-                                                bg={
-                                                    skill.color &&
-                                                    skill.color + ".50"
-                                                }
-                                                rounded={"xl"}
-                                            >
-                                                {skill.icon && (
-                                                    <Icon
-                                                        as={skill.icon}
-                                                        mr={1}
-                                                        w={3}
-                                                        h={3}
-                                                    />
-                                                )}
-                                                <Text fontSize="xs">
-                                                    {skill.name}
-                                                </Text>
-                                            </Tag>
-                                        ))}
-                                    </HStack>
-                                )}
-                            </CardFooter>
-                        </Card>
+                                        {item.title}
+                                    </Heading>
+                                </CardHeader>
+                                <CardBody py={0}>
+                                    <Text
+                                        lineHeight={2}
+                                        color={"gray.500"}
+                                        fontSize={"sm"}
+                                    >
+                                        {item.description}
+                                    </Text>
+                                </CardBody>
+                                <CardFooter>
+                                    {item.skills && (
+                                        <HStack flexWrap={"wrap"} spacing={3}>
+                                            {item.skills.map((skill) => (
+                                                <Tag
+                                                    color={
+                                                        skill.color &&
+                                                        skill.color + ".600"
+                                                    }
+                                                    bg={
+                                                        skill.color &&
+                                                        skill.color + ".50"
+                                                    }
+                                                    rounded={"xl"}
+                                                >
+                                                    {skill.icon && (
+                                                        <Icon
+                                                            as={skill.icon}
+                                                            mr={1}
+                                                            w={3}
+                                                            h={3}
+                                                        />
+                                                    )}
+                                                    <Text fontSize="xs">
+                                                        {skill.name}
+                                                    </Text>
+                                                </Tag>
+                                            ))}
+                                        </HStack>
+                                    )}
+                                </CardFooter>
+                            </Card>
+                        </Box>
                     ))}
                 </HStack>
             ))}

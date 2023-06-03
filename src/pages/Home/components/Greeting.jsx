@@ -8,8 +8,8 @@ function Greeting() {
                 as={"h1"}
                 letterSpacing={1}
                 fontWeight={"extrabold"}
-                maxW={"640px"}
-                fontSize={"5xl"}
+                maxW={"800px"}
+                fontSize={{base: "5xl", lg: "7xl"}}
                 textAlign={"center"}
                 bgGradient={"linear(to-br, green.200, green.300, blue.400)"}
                 bgClip={"text"}
@@ -32,10 +32,10 @@ function Greeting() {
                 px={10}
                 py={6}
                 href="mailto:yazidzm.developer@gmail.com?subject=Hello%20Yazid"
-                bg={"green.200"}
+                bg={"teal.200"}
                 letterSpacing={1}
-                _hover={{ bg: "green.300" }}
-                color={"green.800"}
+                _hover={{ bg: "teal.400", color: "white", transform: "scale(1.02)", shadow: "0px 6px 16px #38B2AC", border: '1px', borderColor: 'rgba(255,255,255,0.2)' }}
+                color={"teal.800"}
             >
                 Get in touch
             </Button>
