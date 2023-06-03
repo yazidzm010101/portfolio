@@ -13,14 +13,18 @@ import Blob from "../../../assets/Blob";
 function About() {
     return (
         <Box id="about" maxW="container.xl" mx={"auto"} px={6}>
-            <Stack direction={{base: "column", md: "row"}} alignItems={"flex-start"} spacing={7}>
-                <Box w={{base: 'full', md: "40%"}} pos={"relative"}>
+            <Stack
+                direction={{ base: "column", md: "row" }}
+                alignItems={"flex-start"}
+                spacing={7}
+            >
+                <Box w={{ base: "full", md: "40%" }} pos={"relative"}>
                     <Heading
                         w={"full"}
                         as="h2"
                         mb={10}
                         px={4}
-                        textAlign={{base: "center", md: "start"}}
+                        textAlign={{ base: "center", md: "start" }}
                         fontSize={"xl"}
                         letterSpacing={3}
                         fontWeight={"extrabold"}
@@ -30,18 +34,21 @@ function About() {
                         About me
                     </Heading>
                     <Box
-                        color={"green.100"}
-                        opacity={0.5}
+                        color={"gray.100"}
                         pos={"absolute"}
                         top={0}
                         left={0}
-                        w={"200%"}
-                        zIndex={-1}
+                        w={"400%"}
                         transform={"translate(-50%, 0)"}
                     >
                         <Blob />
                     </Box>
-                    <AspectRatio ratio={1} w={"200px"} mx={{base: "auto", md:"unset"}} maxW={"full"}>
+                    <AspectRatio
+                        ratio={1}
+                        w={"200px"}
+                        mx={{ base: "auto", md: "unset" }}
+                        maxW={"full"}
+                    >
                         <Image
                             rounded={"3rem"}
                             w={"full"}
@@ -50,22 +57,22 @@ function About() {
                         />
                     </AspectRatio>
                 </Box>
-                <VStack w={{base: "full", md: "80%"}}>
+                <VStack w={{ base: "full", md: "80%" }} pos={"relative"}>
                     <Text
                         w={"full"}
                         letterSpacing={1}
                         lineHeight={2}
-                        fontSize={{base: "lg", md: "xl"}}
+                        fontSize={{ base: "md", md: "lg" }}
                     >
-                        I'm Yazid Zaidan Mujadid. Sit reprehenderit ullamco quis
-                        mollit anim ad sunt magna enim ad. Incididunt et sunt
-                        adipisicing cupidatat ipsum velit. Ex esse sit laboris
-                        sunt eiusmod excepteur duis proident do. Elit velit
-                        occaecat anim non amet Lorem sunt incididunt commodo
-                        velit.Irure commodo reprehenderit irure voluptate
-                        aliquip ipsum id culpa commodo velit cupidatat commodo.
-                        Irure sit laborum consectetur cillum est excepteur. Elit
-                        exercitation magna proident ea dolore non.
+                        I'm Yazid Zaidan Mujadid.
+                        <br /> Already has an interest in information
+                        technology since high school and graduated from
+                        Gunadarma University in 2021. During college,
+                        contributed to a computer laboratory and learned web
+                        programming from PHP to Javascript. Gained first work 
+                        experience at Pt. Jojo Nomic Indonesia and are now
+                        looking for a new opportunity as a Front-end Web
+                        Developer.
                     </Text>
                 </VStack>
             </Stack>

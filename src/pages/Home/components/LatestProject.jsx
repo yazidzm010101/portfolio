@@ -7,23 +7,15 @@ const data = [
         thumbnail: "project-hijab.png",
     },
     {
-        name: "Hijab Ibnaty",
-        thumbnail: "project-hijab.png",
-    },
-    {
-        name: "Hijab Ibnaty",
-        thumbnail: "project-hijab.png",
-    },
-    {
-        name: "Hijab Ibnaty",
-        thumbnail: "project-hijab.png",
+        name: "Qliner",
+        thumbnail: "project-qliner.png",
     },
 ];
 
 function LatestProject() {
     return (
         <Box pos={"relative"} maxW="container.xl" w={"full"} mx={"auto"}>
-            <HStack spacing={7} overflowX={"auto"} pos={"relative"} px={4}>
+            <HStack spacing={7} overflowX={"auto"} pos={"relative"} p={4}>
                 {data.map((item, i) => (
                     <Link
                         key={i}
@@ -32,6 +24,12 @@ function LatestProject() {
                         display={"block"}
                         w={"full"}
                         rounded={"xl"}
+                        border={"1px"}
+                        borderColor={"blackAlpha.200"}
+                        _hover={{
+                            transform: "scale(1.01)",
+                            borderColor: "green.400",
+                        }}
                         minW={{ base: "full", sm: "480px" }}
                         overflow={"hidden"}
                     >
@@ -47,7 +45,7 @@ function LatestProject() {
                                 />
                                 <Text
                                     bgGradient={
-                                        "linear(to-b, rgba(0,0,0,0), blackAlpha.300, blackAlpha.700)"
+                                        "linear(to-b, rgba(0,0,0,0), blackAlpha.300, blackAlpha.800)"
                                     }
                                     color={"white"}
                                     pb={4}
@@ -59,8 +57,9 @@ function LatestProject() {
                                     fontWeight={"bold"}
                                     letterSpacing={2}
                                     justifyContent={"start !important"}
-                                    top={"unset !important"}
-                                    h={"max-content !important"}
+                                    alignItems={"end !important"}
+                                    top={0}
+                                    // h={"max-content !important"}
                                 >
                                     {item.name}
                                 </Text>
@@ -69,7 +68,7 @@ function LatestProject() {
                     </Link>
                 ))}
             </HStack>
-            <Box
+            {/* <Box
                 pointerEvents={"none"}
                 pos={"absolute"}
                 top={0}
@@ -90,7 +89,7 @@ function LatestProject() {
                 bgGradient={
                     "linear(to-r, rgba(255,255,255,0), rgba(255,255,255,1))"
                 }
-            />
+            /> */}
         </Box>
     );
 }
