@@ -263,8 +263,8 @@ function Experience() {
                     px={{ base: 0, lg: "6rem" }}
                     py={6}
                     alignItems={"stretch"}
-                    _before={{ content: "''", margin: "auto" }}
-                    _after={{ content: "''", margin: "auto" }}
+                    _before={{md: { content: "''", margin: "auto" }}}
+                    _after={{md: { content: "''", margin: "auto" }}}
                 >
                     {item.experiences.map((item, i) => (
                         <Box

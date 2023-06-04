@@ -104,6 +104,7 @@ function About() {
                     </Text>
                     <HStack
                         justifyContent={{ base: "center", md: "flex-start" }}
+                        flexWrap={"wrap"}
                         w={"full"}
                         mt={2}
                         spacing={10}

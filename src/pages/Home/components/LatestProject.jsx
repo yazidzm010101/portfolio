@@ -54,8 +54,8 @@ function LatestProject() {
                 pos={"relative"}
                 px={{ base: 0, lg: "6rem" }}
                 py={6}
-                _before={{ content: "''", margin: "auto" }}
-                _after={{ content: "''", margin: "auto" }}
+                _before={{md: { content: "''", margin: "auto" }}}
+                _after={{md: { content: "''", margin: "auto" }}}
             >
                 {data.map((item, i) => (
                     <Box
